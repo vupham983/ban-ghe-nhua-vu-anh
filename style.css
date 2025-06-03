@@ -16,15 +16,15 @@ body {
 }
 
 h1 {
-    color: #333; /* Darker color for headings */
+    color: #333;
 }
 
 h2 {
     text-align: center;
     margin-bottom: 30px;
     font-size: 2em;
-    color: #8B4513; /* A brown color, can be adjusted */
-    text-transform: uppercase; /* VIẾT HOA TIÊU ĐỀ MỤC */
+    color: #8B4513;
+    text-transform: uppercase;
 }
 
 h3 {
@@ -33,7 +33,7 @@ h3 {
 
 a {
     text-decoration: none;
-    color: #007bff; /* Standard link blue */
+    color: #007bff;
 }
 
 a:hover {
@@ -58,6 +58,7 @@ header .container {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    flex-wrap: wrap; /* Cho phép xuống dòng trên mobile */
 }
 
 .logo-container {
@@ -66,14 +67,14 @@ header .container {
 }
 
 #logo {
-    height: 70px; /* Adjust as needed */
+    height: 70px;
     margin-right: 15px;
 }
 
 .brand-name h1 {
     margin: 0;
     font-size: 1.8em;
-    color: #5D4037; /* Brown color to match logo feel */
+    color: #5D4037;
 }
 
 .brand-name .tagline {
@@ -105,151 +106,292 @@ header .container {
     border-radius: 0 4px 4px 0;
     cursor: pointer;
 }
-
 .search-bar button:hover {
     background-color: #0056b3;
 }
 
-
-/* Navigation Styles - START */
+/* Navigation Styles */
 nav {
-    background-color: #5D4037; /* Dark Brown for nav background */
+    background-color: #5D4037;
     color: #fff;
     padding: 10px 0;
-    margin-top: 10px; /* Space between header content and nav bar */
+    margin-top: 10px; 
 }
 
 nav ul {
     list-style-type: none;
     padding: 0;
     margin: 0;
-    text-align: center; /* Centers the inline-block li items */
+    text-align: center;
 }
 
-/* Main navigation items */
 nav ul li {
-    display: inline-block; /* This is CRUCIAL for horizontal menu */
-    margin: 0 15px;
-    position: relative; /* Needed for dropdown positioning context */
+    display: inline-block;
+    margin: 0 10px; /* Giảm margin cho vừa hơn */
+    position: relative;
 }
 
 nav ul li a {
     color: #fff;
-    font-size: 1.1em;
-    padding: 10px 5px; /* Adjusted padding for better spacing */
+    font-size: 1.05em; /* Giảm nhẹ font size */
+    padding: 10px 8px; /* Điều chỉnh padding */
     text-transform: uppercase;
-    display: block; /* Make the entire area clickable */
+    display: block;
 }
-
 nav ul li a:hover {
     text-decoration: none;
-    /* Removed border-bottom: 2px solid #fff; for a cleaner look with dropdowns, can be added back if preferred */
+    background-color: #4E342E; /* Thêm hiệu ứng hover nhẹ cho nav */
+    border-radius: 3px;
 }
-
-/* Arrow for dropdown */
 nav ul li a .arrow {
     font-size: 0.8em;
     margin-left: 5px;
 }
-
-/* Submenu / Dropdown menu container */
 nav ul .dropdown-menu {
-    display: none; /* Hidden by default */
+    display: none;
     position: absolute;
-    top: 100%; /* Position below the parent li */
-    left: 0; /* Align to the left of the parent li */
-    background-color: #6D4C41; /* Slightly different background for dropdown */
+    top: 100%;
+    left: 0;
+    background-color: #6D4C41;
     list-style-type: none;
-    padding: 10px 0; /* Padding top/bottom for the dropdown box */
-    margin: 0; /* Reset margin */
-    min-width: 280px; /* Minimum width of the dropdown */
-    z-index: 1000; /* Ensure dropdown is on top */
+    padding: 10px 0;
+    margin: 0;
+    min-width: 260px; /* Điều chỉnh chiều rộng dropdown */
+    z-index: 1000;
     border-radius: 0 0 4px 4px;
     box-shadow: 0 4px 8px rgba(0,0,0,0.15);
-    text-align: left; /* Text alignment for dropdown items */
+    text-align: left;
 }
-
-/* Show dropdown on hover of its parent */
 nav ul li.dropdown-parent:hover .dropdown-menu {
     display: block;
 }
-
-/* List items within the dropdown menu */
 nav ul .dropdown-menu li {
-    display: block; /* Each item takes full width of dropdown */
-    margin: 0; /* Reset margin for these li */
-    width: 100%; /* Ensure li takes full width */
+    display: block;
+    margin: 0;
+    width: 100%;
 }
-
-/* Links within the dropdown menu */
 nav ul .dropdown-menu li a {
     color: #fff;
-    padding: 10px 20px; /* Padding for dropdown links */
-    font-size: 0.95em;
-    text-transform: none; /* Normal case for dropdown text */
-    white-space: nowrap; /* Prevent text wrapping for dropdown items */
+    padding: 10px 15px; /* Điều chỉnh padding cho item dropdown */
+    font-size: 0.9em; /* Giảm nhẹ font size item dropdown */
+    text-transform: none;
+    white-space: nowrap;
 }
-
 nav ul .dropdown-menu li a:hover {
-    background-color: #5D4037; /* Hover background for dropdown links */
+    background-color: #5D4037;
+}
+
+/* === Bố cục 2 cột cho trang danh mục sản phẩm và trang chủ === */
+.page-content-container {
+    padding-top: 20px; /* Giảm padding top một chút */
+    padding-bottom: 30px;
+}
+
+.page-layout-container {
+    display: flex;
+    flex-wrap: wrap; 
+    gap: 25px; /* Giảm khoảng cách giữa sidebar và main một chút */
+}
+
+.sidebar {
+    flex: 0 0 250px; /* Giảm nhẹ độ rộng sidebar */
+    /* background-color: #f8f8f8; */
+    /* padding: 15px; */ /* Nếu muốn có padding cho sidebar */
+    /* border-right: 1px solid #ddd; */ /* Nếu muốn có đường kẻ */
+}
+
+/* Trong style.css */
+.sidebar-fanpage h3 {
+    font-size: 1.2em; /* Hoặc kích thước bạn muốn */
+    color: #2ecc71;  /* Màu xanh lá ví dụ */
+    margin-bottom: 10px;
+    padding-bottom: 5px;
+    border-bottom: 1px solid #eee; /* Đường kẻ nhẹ nếu muốn */
+    text-transform: uppercase;
+}
+
+.sidebar-nav {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+.sidebar-nav li {
+    margin-bottom: 1px;
+}
+.sidebar-nav li a {
+    display: block;
+    padding: 10px 12px; /* Điều chỉnh padding */
+    color: #333;
     text-decoration: none;
+    border-bottom: 1px solid #f0f0f0; 
+    transition: background-color 0.2s ease, color 0.2s ease;
+    font-size: 1em; /* Giảm nhẹ font size */
+    border-radius: 3px;
 }
-/* Navigation Styles - END */
-/* Thêm đoạn CSS này vào cuối tệp style.css của bạn */
-
-/* Hero Section - Đã sửa lại màu chữ để dễ đọc hơn */
-#hero {
-    background: url('images/your-actual-banner-image.jpg') no-repeat center center/cover; 
-    /* QUAN TRỌNG: Hãy thay 'images/your-actual-banner-image.jpg' bằng đường dẫn đến ảnh banner thực tế của bạn. */
-    /* Nếu bạn chưa có ảnh banner, có thể tạm dùng màu nền sáng, ví dụ: background-color: #f0f0f0; */
-    
-    color: #5D4037; /* ĐỔI MÀU CHỮ CHUNG CỦA SECTION THÀNH NÂU ĐẬM */
-    text-align: center;
-    padding: 70px 20px; /* Tăng/giảm padding để điều chỉnh độ lớn của khu vực banner */
+.sidebar-nav li a:hover,
+.sidebar-nav li a.active {
+    background-color: #5D4037;
+    color: #fff;
+    border-bottom-color: #5D4037;
 }
 
-#hero h2 { /* Tiêu đề chính trong banner */
-    font-size: 2.5em; /* Có thể điều chỉnh kích thước chữ */
-    margin-bottom: 20px;
-    color: #4E342E; /* ĐỔI MÀU TIÊU ĐỀ THÀNH NÂU ĐẬM HƠN (hoặc dùng #5D4037) */
-    /* text-shadow: 1px 1px 2px rgba(255,255,255,0.2); /* Có thể thêm bóng mờ sáng nếu nền banner của bạn là màu tối */
-    line-height: 1.3; 
+/* Class cho cột nội dung chính trên trang chủ và các trang danh mục */
+.main-homepage-content, 
+.main-product-listing {
+    flex: 1; 
+    min-width: 0; 
+}
+
+/* Tiêu đề chính của phần nội dung trên các trang con (VD: GHẾ CÀ PHÊ NHỰA ĐÚC) */
+.page-title-main-content { 
+    font-size: 2em; 
+    color: #5D4037;
+    margin-top: 0; 
+    margin-bottom: 20px; /* Tăng margin bottom */
+    text-align: left; 
     text-transform: uppercase;
+    border-bottom: 1px solid #ddd;
+    padding-bottom: 10px;
 }
 
-#hero p { /* Dòng mô tả nhỏ dưới tiêu đề chính */
-    font-size: 1.2em; /* Có thể điều chỉnh kích thước chữ */
-    margin-bottom: 30px;
-    text-transform: uppercase;
-    color: #5D4037; /* ĐẢM BẢO DÒNG NÀY CŨNG CÓ MÀU NÂU ĐẬM */
+.category-description { 
+    font-size: 1em;
+    margin-bottom: 25px; /* Tăng margin bottom */
+    color: #555;
+    text-align: left;
 }
 
-/* Nút .cta-button giữ nguyên như cũ, vì nó đã có nền nâu và chữ trắng, khá nổi bật */
-.cta-button {
-    background-color: #8D6E63; 
-    color: white;
-    padding: 15px 30px;
-    font-size: 1.2em;
+/* === Styles for Main Hero Banner Slider (Homepage) === */
+#hero-main-banner-slider {
+    position: relative;
+    width: 100%;
+    min-height: 350px; 
+    overflow: hidden;  
+    margin-bottom: 30px; 
+    background-color: #e0e0e0; 
+    border-radius: 5px; /* Thêm bo góc nhẹ cho banner */
+}
+
+.slides-container {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    width: 100%; 
+    height: 100%; 
+    position: relative; 
+    min-height: 350px;
+}
+
+.slide {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    min-height: 350px;
+    background-size: cover;
+    background-position: center center;
+    display: flex;
+    align-items: center; 
+    justify-content: center; 
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.7s ease-in-out, visibility 0s linear 0.7s;
+    border-radius: 5px; /* Bo góc cho từng slide */
+}
+
+.slide.active-slide {
+    opacity: 1;
+    visibility: visible;
+    position: relative; 
+    z-index: 10;
+    transition-delay: 0s;
+}
+
+.slide:not(.active-slide) {
+    z-index: 1;
+}
+
+.hero-info-overlay {
+    background-color: rgba(0, 0, 0, 0.6); /* Nền đen mờ hơn chút */
+    color: #fff;
+    padding: 20px 25px;
     border-radius: 5px;
+    max-width: 450px; 
+    width: calc(100% - 40px); 
+    text-align: center; 
+    box-shadow: 0 2px 10px rgba(0,0,0,0.3);
+}
+
+.hero-info-overlay h2 {
+    font-size: 2em; /* Tăng kích thước tiêu đề trên banner */
+    margin-top: 0;
+    margin-bottom: 10px;
+    color: #fff; 
     text-transform: uppercase;
-    transition: background-color 0.3s ease;
-    text-decoration: none;
+    text-shadow: 1px 1px 2px rgba(0,0,0,0.6);
 }
 
-.cta-button:hover {
-    background-color: #6D4C41; 
-    text-decoration: none;
+.hero-info-overlay p {
+    font-size: 1.05em; 
+    margin-bottom: 10px; 
+    line-height: 1.6;
+    color: #f0f0f0; 
+}
+.hero-info-overlay p strong { 
+    color: #fff; 
 }
 
-/* Product Categories on Homepage */
-#product-categories {
-    padding: 50px 0;
-    background-color: #fff;
+.cta-button-hero { 
+    display: inline-block; 
+    background-color: #FFC107; 
+    color: #333; 
+    padding: 12px 25px;
+    text-decoration: none; 
+    font-weight: bold; 
+    border-radius: 4px; 
+    margin-top: 15px; 
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    font-size: 1em;
 }
+.cta-button-hero:hover { 
+    background-color: #e0a800;
+    transform: translateY(-2px); /* Hiệu ứng nhấc nút lên khi hover */
+}
+
+/* Styles for sections within main-homepage-content */
+.main-homepage-content section { /* Thêm padding cho các section trên trang chủ */
+    padding-top: 20px;
+    padding-bottom: 30px;
+}
+.main-homepage-content section:first-child { /* Section banner slider không cần padding top này */
+    padding-top: 0;
+}
+
+.main-homepage-content h2 { /* Tiêu đề các section trên trang chủ */
+    text-align: left;
+    margin-left: 0;
+    padding-left: 0;
+    font-size: 1.8em; 
+    color: #8B4513;
+    text-transform: uppercase;
+    margin-bottom: 25px; 
+    border-bottom: 2px solid #eee; /* Thêm đường kẻ nhẹ dưới tiêu đề section */
+    padding-bottom: 10px;
+}
+
+
+/* === Product Categories on Homepage (DANH MỤC SẢN PHẨM) === */
+#product-categories-home { /* ID cho section danh mục trên trang chủ */
+    padding-top: 30px; /* Điều chỉnh khoảng cách nếu cần */
+    padding-bottom: 40px;
+}
+
+/* CSS cho #product-categories-home h2 sẽ lấy từ .main-homepage-content h2 */
 
 .category-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); /* Điều chỉnh 200px nếu muốn ô to/nhỏ hơn */
     gap: 20px;
     text-align: center;
 }
@@ -259,86 +401,90 @@ nav ul .dropdown-menu li a:hover {
     padding: 15px;
     border-radius: 5px;
     background-color: #fff;
-    box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+    box-shadow: 0 1px 3px rgba(0,0,0,0.05);
     transition: transform 0.2s ease, box-shadow 0.2s ease;
 }
-.category-item a { /* Đảm bảo link trong category item hoạt động tốt */
+.category-item a {
     text-decoration: none;
     color: inherit;
     display: block;
 }
 .category-item:hover {
     transform: translateY(-5px);
-    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
 }
 
 .category-item img {
+    max-width: 100%;
+    height: auto;   
+    max-height: 160px; /* Giới hạn chiều cao ảnh danh mục, điều chỉnh nếu cần */
+    object-fit: contain; /* 'contain' để thấy toàn bộ ảnh, 'cover' để lấp đầy */
     margin-bottom: 10px;
     border-radius: 4px;
-    border: 1px solid #ddd;
-    /* aspect-ratio: 3/2; /* Tùy chỉnh tỷ lệ cho ảnh danh mục */
-    /* object-fit: cover; */
-    max-width: 100%; /* Đảm bảo ảnh vừa vặn */
-    height: auto;
+    /* border: 1px solid #ddd; /* Có thể bỏ nếu đã có border cho .category-item */
 }
 
 .category-item h3 {
-    font-size: 1.3em;
+    font-size: 1.2em; /* Điều chỉnh nếu cần */
     margin: 10px 0 0 0;
     color: #5D4037;
     text-transform: uppercase;
 }
 
-/* Featured Products (Homepage) and Product Listings (Category Pages) */
-#featured-products { /* ID này dùng cho mục SP nổi bật trên trang chủ */
-    padding: 50px 0;
+
+/* === Featured Products on Homepage (SẢN PHẨM NỔI BẬT) === */
+#featured-products { /* ID cho section sản phẩm nổi bật trên trang chủ */
+    padding-top: 30px;
+    padding-bottom: 40px;
+    /* background-color: #f9f9f9; /* Có thể thêm màu nền nếu muốn */
 }
-/* Class dùng chung cho lưới sản phẩm ở nhiều nơi */
-.product-grid-container { /* Bạn có thể dùng class này để bao bọc .product-grid trên các trang danh mục */
-    padding: 20px 0 50px 0;
-}
-.product-grid {
+
+/* CSS cho #featured-products h2 sẽ lấy từ .main-homepage-content h2 */
+
+.product-grid { /* Class này dùng chung cho cả SP nổi bật và các trang danh mục SP */
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-    gap: 20px;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); /* Điều chỉnh 200px nếu muốn ô to/nhỏ hơn */
+    gap: 20px; /* Khoảng cách giữa các sản phẩm */
 }
 
 .product-item {
     border: 1px solid #ddd;
     border-radius: 5px;
-    padding: 10px; /* THỬ GIẢM PADDING (ban đầu có thể là 15px) */
+    padding: 15px; /* Tăng lại padding một chút */
     text-align: center;
     background-color: #fff;
-    box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+    box-shadow: 0 1px 3px rgba(0,0,0,0.05);
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+    transition: box-shadow 0.3s ease;
 }
 .product-item:hover {
     box-shadow: 0 4px 12px rgba(0,0,0,0.1);
 }
 
 .product-item img {
-    max-width: 80%;
-    height: auto;
-    max-height: 200px;   
-    /* aspect-ratio: 1/1; /* Giữ ảnh vuông, tùy chỉnh nếu cần */
-    /* object-fit: cover; */
+    max-width: 100%; 
+    height: auto;   
+    max-height: 180px; /* Giới hạn chiều cao ảnh sản phẩm, bạn có thể điều chỉnh */
+    object-fit: contain; /* 'contain' để thấy toàn bộ ảnh, 'cover' để lấp đầy */
     margin-bottom: 15px;
+    margin-left: auto; /* Căn giữa ảnh nếu max-width không phải 100% */
+    margin-right: auto; /* Căn giữa ảnh */
     border-radius: 4px;
-    border: 1px solid #eee;
+    /* border: 1px solid #eee; */ /* Có thể bỏ nếu đã có border cho .product-item */
 }
 
 .product-item h3 {
-    font-size: 1.2em;
+    font-size: 1.1em; /* Điều chỉnh nếu cần */
     margin: 10px 0;
-    color: #333; /* Đã có ở general h3 nhưng để đây cho rõ */
-    text-transform: none; /* Không viết hoa tên sản phẩm nếu không muốn */
-     /* flex-grow: 1; /* Uncomment nếu muốn các tên SP có chiều cao bằng nhau để nút bấm thẳng hàng */
+    color: #333;
+    text-transform: none; 
+    line-height: 1.3; /* Thêm để dễ đọc hơn nếu tên sản phẩm dài */
 }
 
 .product-item .price {
-    font-size: 1.1em;
+    font-size: 1.05em; /* Điều chỉnh nếu cần */
     color: #B71C1C; 
     font-weight: bold;
     margin: 10px 0;
@@ -347,12 +493,13 @@ nav ul .dropdown-menu li a:hover {
 .product-item .btn-detail {
     background-color: #007bff;
     color: white;
-    padding: 10px 20px;
+    padding: 8px 15px; /* Điều chỉnh padding nút */
     border-radius: 4px;
-    display: inline-block;
+    display: inline-block; 
     margin-top: 10px;
     text-transform: uppercase;
     text-decoration: none;
+    font-size: 0.9em; /* Điều chỉnh chữ nút */
     transition: background-color 0.3s ease;
 }
 
@@ -361,578 +508,85 @@ nav ul .dropdown-menu li a:hover {
     text-decoration: none;
 }
 
-/* About Us Section (trên trang chủ) */
-#about.about-us { /* Sử dụng ID #about và class .about-us */
-    padding: 50px 0;
-    background-color: #f0ebe5; 
+/* Featured Products on Homepage */
+#featured-products .product-grid { /* Sử dụng lại .product-grid */
+    /* CSS đã có ở trên, đảm bảo minmax(200px, 1fr) hoặc giá trị bạn đã chỉnh */
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); /* Đảm bảo giá trị này */
 }
-#about.about-us .container { /* Căn giữa nội dung trong container của section about */
-    text-align: center;
+#featured-products .product-item { /* Sử dụng lại .product-item */
+    /* CSS đã có ở trên, đảm bảo max-height ảnh và padding item */
 }
-#about.about-us h2 { /* Tiêu đề section đã được định dạng bởi h2 chung */
-    color: #5D4037;
-}
-#about.about-us p {
-    font-size: 1.1em;
-    line-height: 1.7;
-    max-width: 800px; /* Giới hạn chiều rộng đoạn văn */
-    margin: 0 auto 15px auto; /* Căn giữa và tạo khoảng cách */
-}
-
-
-/* Footer */
-footer {
-    background-color: #3E2723; 
-    color: #f0f0f0;
-    padding: 40px 0 20px 0;
-    margin-top: 30px;
-}
-
-.footer-content {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-    gap: 20px;
-    margin-bottom: 30px;
-}
-
-.footer-col {
-    flex: 1;
-    min-width: 250px; 
-}
-
-.footer-col h3 {
-    font-size: 1.5em;
+#featured-products .product-item img {
+    max-width: 100%;
+    height: auto;   
+    max-height: 180px; /* Kích thước ảnh sản phẩm nổi bật nhỏ hơn một chút */
+    object-fit: contain; 
     margin-bottom: 15px;
-    color: #fff;
-    text-transform: uppercase;
-}
-.footer-col h4 {
-    font-size: 1.2em;
-    margin-bottom: 10px;
-    color: #D7CCC8; 
-    text-transform: uppercase; 
-}
-
-.footer-col p {
-    margin-bottom: 10px;
-    font-size: 0.95em;
-    line-height: 1.5;
-}
-
-.footer-col ul {
-    list-style: none;
-    padding: 0;
-}
-
-.footer-col ul li {
-    margin-bottom: 8px;
-}
-
-.footer-col ul li a {
-    color: #BCAAA4; 
-    transition: color 0.3s ease;
-    text-transform: uppercase; 
-    text-decoration: none;
-}
-
-.footer-col ul li a:hover {
-    color: #fff;
-    text-decoration: underline;
-}
-
-.copyright {
-    text-align: center;
-    padding-top: 20px;
-    border-top: 1px solid #5D4037; 
-    font-size: 0.9em;
-    color: #A1887F; 
-}
-
-/* Responsive Adjustments */
-@media (max-width: 992px) {
-    header .container {
-        flex-direction: column;
-        text-align: center;
-    }
-    .logo-container {
-        margin-bottom: 10px;
-        justify-content: center; 
-        flex-direction: column; 
-    }
-    .logo-container .brand-name {
-        margin-top: 5px;
-    }
-    .header-contact {
-        text-align: center;
-        margin-top:10px;
-    }
-    nav ul li {
-        margin: 0 8px; 
-    }
-    nav ul li a {
-        font-size: 1em; 
-    }
-}
-
-@media (max-width: 768px) {
-    nav ul { /* Cho menu chính trên mobile */
-        /* Nếu muốn menu dọc trên mobile thì bỏ display:flex và để li là display:block */
-        /* display: flex; */
-        /* flex-direction: column; */
-        /* align-items: center; */
-    }
-    nav ul li { /* Các mục menu chính */
-         display: block; /* Cho các mục menu chính xếp dọc trên mobile */
-         margin: 8px 0;
-    }
-    nav ul .dropdown-menu { /* Menu con vẫn giữ nguyên cách hoạt động */
-        min-width: 200px; /* Có thể thu nhỏ menu con một chút */
-    }
-
-    #hero h2 {
-        font-size: 1.8em; 
-    }
-    #hero p {
-        font-size: 1em;
-    }
-    .footer-content {
-        flex-direction: column;
-        align-items: center;
-        text-align: center;
-    }
-    .footer-col {
-        margin-bottom: 20px;
-        width: 90%; /* Cho các cột footer rộng hơn trên mobile */
-    }
-}
-
-@media (max-width: 480px) {
-    .brand-name h1 {
-        font-size: 1.5em;
-    }
-    #logo {
-        height: 50px;
-    }
-    .search-bar {
-        display: flex;
-        flex-direction: column; /* Search bar xếp dọc */
-        width: 90%;
-        margin: 0 auto;
-    }
-    .search-bar input[type="text"], 
-    .search-bar button {
-        width: 100%; 
-        border-radius: 4px; /* Bo tròn đều các góc */
-        margin-top: 5px;
-    }
-    .search-bar input[type="text"] {
-         margin-bottom: 5px; /* Khoảng cách giữa input và button */
-    }
-
-
-    /* Product grid items stack on very small screens */
-    .product-grid, .category-grid { 
-        grid-template-columns: 1fr; /* 1 cột */
-    }
-}
-
-/* CSS cho các trang con như policy, giới thiệu, liên hệ, tin tức */
-.page-header { 
-    padding: 15px 0; 
-    text-align: center; 
-    background-color: #f8f9fa; 
-    border-bottom: 1px solid #ddd; 
-}
-.page-header .site-title-link { 
-    font-weight: bold; 
-    color: #5D4037; 
-    font-size: 1.8em; 
-    text-decoration: none; 
-}
-.page-header .quick-nav {
-    margin-top: 10px;
-}
-.page-header .quick-nav a { 
-    margin: 0 10px; 
-    color: #007bff; 
-    text-decoration: none; 
-    font-size: 1em; 
-    text-transform: uppercase;
-}
-.page-header .quick-nav a:hover { 
-    text-decoration: underline; 
-}
-
-.page-content, .policy-content, .product-grid-container { /* Class dùng chung cho phần nội dung chính của các trang con */
-    padding: 30px 0; 
-    line-height: 1.8; 
-}
-.page-content h1, .policy-content h1, .product-grid-container .page-title { 
-    color: #5D4037; 
-    text-align: center; 
-    margin-top: 20px; /* Thêm margin top cho tiêu đề trang */
-    margin-bottom: 30px; /* Tăng margin bottom */
-    font-size: 2.2em; /* Điều chỉnh kích thước tiêu đề trang */
-    text-transform: uppercase; 
-}
-.page-content h2, .policy-content h2 { /* Tiêu đề phụ trong trang con */
-    color: #8B4513; 
-    font-size: 1.6em; /* Tăng kích thước một chút */
-    margin-top: 30px; /* Tăng khoảng cách phía trên */
-    margin-bottom: 15px; 
-    text-transform: none; /* Không viết hoa nếu không muốn */
-    text-align: left; 
-    border-bottom: 1px solid #eee; /* Thêm đường gạch chân nhẹ */
-    padding-bottom: 5px;
-}
-.page-content p, .policy-content p { 
-    margin-bottom: 15px; 
-}
-.page-content ul, .policy-content ul { 
-    list-style-type: disc; 
-    margin-left: 20px; 
-    margin-bottom:15px;
-}
-.back-link-footer, .back-link { /* Link quay lại trang chủ */
-    display: block; 
-    text-align: center; 
-    margin-top: 40px; /* Tăng khoảng cách */
-    margin-bottom: 20px; /* Thêm khoảng cách dưới */
-    color: #007bff; 
-    text-decoration: none; 
-    font-weight: bold;
-    font-size: 1.1em;
-}
-.back-link-footer:hover, .back-link:hover { 
-    text-decoration: underline; 
-}
-
-/* CSS cho trang Tin tức */
-.news-list .news-item {
-    border-bottom: 1px solid #eee;
-    padding-bottom: 20px;
-    margin-bottom: 30px; /* Tăng khoảng cách giữa các tin */
-}
-.news-list .news-item:last-child {
-    border-bottom: none;
-    margin-bottom: 0;
-}
-.news-item h2 { /* Tiêu đề bài viết - ghi đè style h2 chung của trang con */
-    font-size: 1.8em; /* To hơn */
-    color: #8B4513;
-    margin-top: 0; /* Reset margin-top nếu không cần */
-    margin-bottom: 8px;
-    border-bottom: none; /* Bỏ gạch chân của h2 chung */
-    padding-bottom: 0;
-}
-.news-item h2 a { /* Link tiêu đề bài viết */
-    color:inherit; 
-    text-decoration:none;
-}
-.news-item h2 a:hover {
-    color: #5D4037; /* Đổi màu khi hover */
-}
-.news-item .news-meta {
-    font-size: 0.9em;
-    color: #777;
-    margin-bottom: 10px;
-}
-.news-item .news-excerpt { 
-    margin-bottom: 15px;
-    font-size: 1em;
-}
-.news-item .read-more {
-    color: #007bff;
-    text-decoration: none;
-    font-weight: bold;
-}
-.news-item .read-more:hover {
-    text-decoration: underline;
-}
-.news-item img.news-thumbnail { 
-    max-width: 220px; /* Điều chỉnh kích thước ảnh thumbnail */
-    height: auto;
-    float: left;
-    margin-right: 20px;
-    margin-bottom: 10px;
     border-radius: 4px;
-    border: 1px solid #ddd;
-}
-.news-item::after { /* Clearfix cho float */
-    content: "";
-    clear: both;
-    display: table;
+    border: 1px solid #eee;
 }
 
-/* CSS cho trang Liên hệ */
-.contact-container { 
-    display: flex; 
-    flex-wrap: wrap; 
-    gap: 30px; 
-}
-.contact-info, .contact-form-container { 
-    flex: 1; 
-    min-width: 300px; 
-}
-.contact-info h2, .contact-form-container h2 { /* Ghi đè style h2 chung của trang con */
-    color: #8B4513; 
-    font-size: 1.6em; 
-    margin-top:0; /* Reset margin-top nếu không cần */
-    margin-bottom: 15px; 
-    text-transform: none; 
-    text-align: left;
-    border-bottom: none; /* Bỏ gạch chân của h2 chung */
-    padding-bottom: 0;
-}
-.contact-info p { 
-    margin-bottom: 12px; /* Tăng khoảng cách */
-    font-size: 1.05em; /* To hơn một chút */
-}
-.contact-info strong { 
-    color: #333; 
-}
-.contact-form label { 
-    display: block; 
-    margin-bottom: 6px; /* Tăng khoảng cách */
-    font-weight: bold; 
-    font-size: 1.05em;
-}
-.contact-form input[type="text"],
-.contact-form input[type="email"],
-.contact-form textarea {
-    width: 100%;
-    padding: 12px; /* Tăng padding */
-    margin-bottom: 18px; /* Tăng khoảng cách */
-    border: 1px solid #ccc;
-    border-radius: 4px;
-    box-sizing: border-box; /* Quan trọng để padding không làm tăng kích thước box */
-    font-size: 1em;
-}
-.contact-form textarea { 
-    min-height: 150px; /* Tăng chiều cao */
-}
-.contact-form button[type="submit"] {
-    background-color: #5D4037;
-    color: white;
-    padding: 12px 25px;
-    border: none;
-    border-radius: 4px;
-    cursor: pointer;
-    font-size: 1.1em;
-    text-transform: uppercase;
-}
-.contact-form button[type="submit"]:hover { 
-    background-color: #4E342E; 
-}
-.map-container { 
-    margin-top: 40px; /* Tăng khoảng cách */
-}
-.map-container h2 { /* Tiêu đề bản đồ */
-    color: #8B4513; 
-    font-size: 1.6em; 
-    margin-bottom: 15px; 
-    text-transform: none; 
-    text-align: left;
-    border-bottom: none;
-    padding-bottom: 0;
-}
-.map-container iframe { 
-    width: 100%; 
-    height: 400px; 
-    border:0; 
-    border-radius: 5px;
-}
-/* CSS cho các trang con như policy, sản phẩm chi tiết */
-.sub-category-title { /* Dùng cho trang Bàn sự kiện để chia nhóm */
-    font-size: 1.8em; 
-    color: #8B4513; 
-    margin-top: 40px; 
-    margin-bottom: 20px; 
-    text-align:center; 
-    border-bottom: 1px solid #eee; 
-    padding-bottom:10px;
-}
-/* === Bố cục 2 cột cho trang danh mục sản phẩm === */
-.page-content-container { /* Class mới bao quanh toàn bộ nội dung trang (trừ header, footer) */
-    padding-top: 30px;
-    padding-bottom: 30px;
-}
-
-.page-layout-container {
-    display: flex;
-    flex-wrap: wrap; /* Cho phép xuống dòng trên màn hình nhỏ nếu cần */
-    gap: 30px; /* Khoảng cách giữa sidebar và nội dung chính */
-}
-
-.sidebar {
-    flex: 0 0 260px; /* Độ rộng cố định cho sidebar, không co giãn */
-    /* background-color: #f8f8f8; */ /* Tùy chọn màu nền */
-    /* padding: 20px; */
-    /* border: 1px solid #ddd; */
-    /* border-radius: 5px; */
-}
-
-.sidebar h3 { /* Tiêu đề "DANH MỤC SẢN PHẨM" */
-    font-size: 1.5em; /* Cỡ chữ cho tiêu đề sidebar */
-    color: #5D4037;
-    margin-top: 0;
-    margin-bottom: 15px;
-    padding-bottom: 10px;
-    border-bottom: 2px solid #5D4037;
-    text-transform: uppercase;
-}
-
-.sidebar-nav {
-    list-style: none;
-    padding: 0;
-    margin: 0;
-}
-
-.sidebar-nav li {
-    margin-bottom: 1px; /* Khoảng cách nhỏ giữa các mục */
-}
-
-.sidebar-nav li a {
-    display: block;
-    padding: 10px 15px;
-    color: #333;
-    text-decoration: none;
-    border-bottom: 1px solid #eee; /* Ngăn cách nhẹ giữa các mục */
-    transition: background-color 0.2s ease, color 0.2s ease;
-    font-size: 1.05em;
-}
-
-.sidebar-nav li a:hover,
-.sidebar-nav li a.active { /* Kiểu cho mục đang được chọn hoặc khi hover */
-    background-color: #5D4037;
-    color: #fff;
-    border-bottom-color: #5D4037;
-}
-
-.main-product-listing {
-    flex: 1; /* Nội dung chính chiếm phần không gian còn lại */
-    min-width: 0; /* Quan trọng để flex item có thể co lại đúng cách */
-}
-
-.page-title-main-content { /* Tiêu đề chính của phần nội dung (ví dụ: "Ghế Cà Phê Nhựa Đúc") */
-    font-size: 2.2em; /* Điều chỉnh nếu cần */
-    color: #5D4037;
-    margin-top: 0; /* Sát lề trên của .main-product-listing */
-    margin-bottom: 15px;
-    text-align: left; /* Hoặc center nếu muốn */
-    text-transform: uppercase;
-    border-bottom: 1px solid #ddd;
-    padding-bottom: 10px;
-}
-
-.category-description { /* Mô tả ngắn dưới tiêu đề trang */
-    font-size: 1em;
-    margin-bottom: 30px;
-    color: #555;
-    text-align: left; /* Hoặc center nếu muốn */
-}
-
-/* Điều chỉnh cho .product-grid bên trong .main-product-listing nếu cần */
-.main-product-listing .product-grid {
-    /* Có thể bạn muốn số cột cố định hơn ở đây nếu không gian hẹp hơn */
-    /* Ví dụ: để luôn có 3 cột nếu đủ rộng */
-    /* grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); */ 
-    /* Hoặc giữ nguyên minmax(250px, 1fr) để nó tự điều chỉnh */
-}
-
-
-/* Responsive cho bố cục 2 cột */
-@media (max-width: 992px) {
-    .sidebar {
-        flex: 0 0 220px; /* Thu nhỏ sidebar một chút */
-    }
-}
-
-@media (max-width: 768px) {
-    .page-layout-container {
-        flex-direction: column; /* Sidebar và nội dung chính xếp chồng lên nhau */
-    }
-    .sidebar {
-        flex-basis: auto; /* Cho phép sidebar chiếm toàn bộ chiều rộng */
-        width: 100%;
-        margin-bottom: 30px; /* Khoảng cách khi sidebar nằm trên */
-    }
-}
-/* === Styles for New Homepage Sections === */
 
 /* Latest News Section on Homepage */
 #latest-news-home {
-    padding: 50px 0;
-    background-color: #fff; /* Hoặc màu nền khác nếu muốn */
+    background-color: #fff; 
+    border-top: 1px solid #eee; /* Ngăn cách với section trên */
 }
-
-#latest-news-home h2 { /* Tiêu đề của mục Tin tức mới nhất */
-    text-align: center;
-    margin-bottom: 40px; /* Tăng khoảng cách dưới tiêu đề */
-    font-size: 2em;
-    color: #8B4513;
-    text-transform: uppercase;
-}
-
 .news-grid-home {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); /* 1-3 cột tùy màn hình */
-    gap: 30px;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); /* Điều chỉnh minmax */
+    gap: 25px; /* Giảm gap */
 }
-
 .news-item-home {
-    border: 1px solid #ddd;
+    border: 1px solid #e0e0e0; /* Viền nhẹ hơn */
     border-radius: 5px;
-    overflow: hidden; /* Để bo góc cho ảnh nếu ảnh tràn ra */
+    overflow: hidden; 
     background-color: #fff;
-    box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+    box-shadow: 0 1px 3px rgba(0,0,0,0.05); /* Bóng đổ nhẹ hơn */
     display: flex;
     flex-direction: column;
+    transition: box-shadow 0.3s ease;
 }
-
+.news-item-home:hover {
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
 .news-item-home img {
     width: 100%;
-    height: 200px; /* Chiều cao cố định cho ảnh tin tức */
-    object-fit: cover; /* Ảnh sẽ che phủ, phần thừa bị cắt */
-    border-bottom: 1px solid #ddd;
+    height: 180px; /* Giảm chiều cao ảnh tin */
+    object-fit: cover; 
+    /* border-bottom: 1px solid #ddd; /* Không cần thiết nếu đã có border cho item */
 }
-.news-item-home a:first-child:hover img { /* Hiệu ứng nhẹ khi hover vào link chứa ảnh */
-    opacity: 0.85;
+.news-item-home a:first-child:hover img {
+    opacity: 0.9;
 }
-
-
 .news-item-home h3 {
-    font-size: 1.3em;
+    font-size: 1.2em; /* Giảm size chữ tiêu đề tin */
     color: #5D4037;
     margin: 15px;
     line-height: 1.4;
 }
-.news-item-home a:first-child h3 { /* Link bao cả ảnh và tiêu đề */
+.news-item-home a:first-child h3 {
      text-decoration: none;
      color: #5D4037;
 }
 .news-item-home a:first-child:hover h3 {
     color: #007bff;
 }
-
-
 .news-excerpt-home {
-    font-size: 0.95em;
+    font-size: 0.9em; /* Giảm size chữ mô tả */
     color: #555;
     margin: 0 15px 15px 15px;
     line-height: 1.6;
-    flex-grow: 1; /* Đẩy nút đọc thêm xuống dưới nếu các excerpt có chiều dài khác nhau */
+    flex-grow: 1; 
 }
-
 .read-more-home {
     display: inline-block;
-    margin: 0 15px 20px 15px; /* Canh lề cho nút đọc thêm */
+    margin: 0 15px 15px 15px; 
     color: #007bff;
     text-decoration: none;
     font-weight: bold;
+    font-size: 0.9em;
 }
-
 .read-more-home:hover {
     text-decoration: underline;
     color: #0056b3;
@@ -940,87 +594,309 @@ footer {
 
 /* Partners Section on Homepage */
 #partners-home {
-    padding: 40px 0;
-    background-color: #f9f9f9; /* Hoặc màu nền khác */
+    background-color: #f9f9f9; 
     border-top: 1px solid #eee;
-    border-bottom: 1px solid #eee;
 }
-
-#partners-home h2 { /* Tiêu đề của mục Đối tác */
-    text-align: center;
-    margin-bottom: 30px;
-    font-size: 2em;
-    color: #8B4513;
-    text-transform: uppercase;
-}
-
 .partner-logos-home {
     display: flex;
-    flex-wrap: wrap; /* Cho phép xuống dòng nếu nhiều logo */
-    justify-content: center; /* Căn giữa các logo */
+    flex-wrap: wrap; 
+    justify-content: center; 
     align-items: center;
-    gap: 40px; /* Khoảng cách giữa các logo */
+    gap: 30px; /* Giảm gap */
 }
-
-.partner-logo-item {
-    text-align: center;
-}
-
 .partner-logo-item img {
-    max-height: 80px; /* Chiều cao tối đa cho logo */
-    max-width: 150px; /* Chiều rộng tối đa cho logo */
+    max-height: 60px; /* Giảm chiều cao logo */
+    max-width: 120px; /* Giảm chiều rộng logo */
     opacity: 0.7;
     transition: opacity 0.3s ease;
 }
-
 .partner-logo-item img:hover {
     opacity: 1;
 }
-/* === Fixed Contact Buttons === */
-.fixed-contact-buttons {
-    position: fixed;
-    bottom: 20px; /* Khoảng cách từ dưới lên */
-    z-index: 1000; /* Đảm bảo nổi trên các phần tử khác */
+
+/* About Us Section on Homepage */
+#about.about-us { 
+    padding: 40px 0; /* Giảm padding */
+    background-color: #f0ebe5; 
+    border-top: 1px solid #eee;
+}
+#about.about-us .container { 
+    text-align: center;
+}
+#about.about-us h2 { 
+    color: #5D4037;
+     border-bottom: none; /* Bỏ border bottom nếu không cần ở about section */
+     padding-bottom: 0;
+}
+#about.about-us p {
+    font-size: 1.05em; /* Giảm nhẹ font */
+    line-height: 1.7;
+    max-width: 750px; 
+    margin: 0 auto 15px auto; 
 }
 
-/* Hotline Button (Bottom Left) */
-.hotline-button {
-    position: fixed; /* Hoặc absolute nếu .fixed-contact-buttons là fixed và làm gốc */
-    bottom: 20px;
-    left: 20px;
-    background-color: #dd0000; /* Màu đỏ giống ví dụ */
-    color: white;
-    padding: 10px 15px;
-    border-radius: 25px;
+
+/* === Footer Updated (Layout 4 cột, màu xanh) === */
+footer {
+    background-color: #2c3e50; /* Màu xanh đậm giống trang mẫu (hoặc #34495e, #263238 tùy bạn chọn) */
+    color: #bdc3c7; /* Màu chữ sáng hơn trên nền đậm (ví dụ: xám nhạt) */
+    padding: 40px 0 0 0; 
+    margin-top: 40px; /* Tăng khoảng cách với nội dung trên */
+    font-size: 0.9em; 
+}
+
+.footer-content.new-footer-layout {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); /* Responsive 4 cột, min 240px */
+    gap: 30px; 
+    margin-bottom: 30px;
+    padding-bottom: 20px; /* Thêm padding dưới cho content */
+    /* border-bottom: 1px solid #3e5062; */ /* Đường kẻ phân cách nhẹ trước copyright nếu muốn */
+}
+
+.footer-col {
+    padding: 0 10px; 
+}
+
+.footer-col h4 {
+    font-size: 1.1em; 
+    margin-top: 0; /* Reset margin top cho h4 */
+    margin-bottom: 20px; 
+    color: #ffffff; 
+    text-transform: uppercase; 
+    padding-bottom: 10px;
+    border-bottom: 1px solid #4a627a; 
+    font-weight: 600; /* Chữ đậm hơn chút */
+}
+
+.footer-col p,
+.footer-col ul li {
+    margin-bottom: 12px; /* Tăng khoảng cách giữa các dòng */
+    line-height: 1.7;
+    color: #dfe6e9; /* Màu chữ sáng hơn cho nội dung */
+}
+.footer-col p strong {
+    color: #fff;
+}
+
+.footer-col ul {
+    list-style: none;
+    padding: 0;
+}
+
+.footer-col ul li a {
+    color: #dfe6e9;
     text-decoration: none;
-    font-size: 1em;
+    transition: color 0.2s ease;
+}
+
+.footer-col ul li a:hover {
+    color: #f1c40f; /* Màu vàng khi hover giống trang mẫu */
+    text-decoration: none; /* Bỏ gạch chân */
+}
+
+/* Social Icons - Cập nhật để sử dụng ảnh */
+.social-icons {
+    margin-bottom: 20px;
+    display: flex; /* Giúp các icon nằm trên một hàng và dễ căn chỉnh */
+    align-items: center;
+}
+
+.social-icons .social-icon {
+    display: inline-flex; /* Sử dụng flex để căn giữa ảnh icon bên trong */
+    justify-content: center;
+    align-items: center;
+    width: 48px;  /* Kích thước của nút vuông/tròn chứa icon */
+    height: 48px;
+    border-radius: 4px; 
+    margin-right: 10px; /* Khoảng cách giữa các nút icon */
+    text-decoration: none;
+    transition: opacity 0.2s ease;
+    /* Không cần font-size, font-weight cho chữ nữa */
+}
+
+.social-icons .social-icon:hover {
+    opacity: 0.85;
+}
+
+/* Định dạng cho thẻ <img> bên trong nút icon */
+.social-icons .social-icon img {
+    width: 48px;  /* Kích thước mong muốn của chính hình ảnh icon */
+    height: 48px; /* Kích thước mong muốn của chính hình ảnh icon */
+    /* object-fit: contain; /* Đảm bảo icon không bị méo nếu ảnh gốc có tỷ lệ khác */
+}
+
+/* Màu nền cho từng nút icon (nếu icon của bạn là màu trắng hoặc cần nền) */
+/* Nếu ảnh icon của bạn đã có màu đầy đủ (ví dụ logo Facebook màu xanh), bạn có thể không cần các màu nền này */
+.social-icons .fb { background-color: #3b5998; } /* Facebook */
+.social-icons .tk { background-color: #000000; } /* TikTok */
+.social-icons .yt { background-color: #ff0000; } /* YouTube */
+/* Subscribe Form */
+.subscribe-form p {
+    margin-bottom: 8px;
+    font-weight: 500; /* Chữ đậm hơn một chút */
+    color: #fff;
+}
+.subscribe-form input[type="email"] {
+    width: calc(100% - 85px); /* Độ rộng input, trừ đi phần của nút */
+    padding: 8px 10px;
+    border: 1px solid #4a627a;
+    background-color: #3e5062; /* Nền input tối hơn */
+    color: #fff;
+    border-radius: 4px 0 0 4px;
+    margin-right: -1px; /* Để nút và input liền nhau */
+    box-sizing: border-box;
+}
+.subscribe-form input[type="email"]::placeholder {
+    color: #bdc3c7;
+}
+.subscribe-form button[type="submit"] {
+    width: 80px; /* Độ rộng nút */
+    padding: 8px 10px;
+    background-color: #f1c40f; /* Màu vàng giống trang mẫu */
+    color: #2c3e50; /* Chữ màu tối trên nền vàng */
+    border: none;
+    border-radius: 0 4px 4px 0;
+    cursor: pointer;
     font-weight: bold;
+    transition: background-color 0.2s ease;
+}
+.subscribe-form button[type="submit"]:hover {
+    background-color: #e1b30a;
+}
+
+/* Fanpage Embed Placeholder */
+.fb-page-plugin-placeholder {
+    background-color: #fff; /* Nền trắng cho khu vực nhúng */
+    min-height: 130px; /* Chiều cao tối thiểu giống trang mẫu */
     display: flex;
     align-items: center;
-    box-shadow: 2px 2px 10px rgba(0,0,0,0.2);
+    justify-content: center;
+    border-radius: 3px;
+}
+.fb-page-plugin-placeholder img {
+    border-radius: 3px; /* Bo góc cho ảnh placeholder nếu dùng */
+}
+/* Khi bạn nhúng Fanpage thật, nó sẽ có style riêng, bạn có thể cần điều chỉnh thẻ div cha của nó */
+
+
+.copyright {
+    text-align: center;
+    padding: 20px 0;
+    border-top: 1px solid #4a627a; /* Đường kẻ trên copyright */
+    font-size: 0.85em;
+    color: #95a5a6; /* Màu chữ copyright nhạt hơn */
+}
+.copyright p {
+    margin:0;
+}
+
+
+/* Fixed Contact Buttons (giữ nguyên như bạn đã có) */
+.fixed-contact-buttons { /* ... */ }
+/* Hotline Button (Bottom Left) */
+.hotline-button {
+    position: fixed;
+    left: 20px;
+    bottom: 20px;
+    background-color: #ff0000; /* Màu đỏ tươi */
+    color: white;
+    padding: 10px 20px; /* Điều chỉnh padding cho vừa vặn */
+    border-radius: 30px; /* Bo tròn nhiều để tạo hình viên thuốc */
+    text-decoration: none;
+    font-size: 1.1em; /* Kích thước chữ, có thể điều chỉnh */
+    font-weight: bold;
+    display: flex; /* Giữ lại để căn giữa text nếu cần */
+    align-items: center;
+    justify-content: center; /* Căn giữa text bên trong nút */
+    box-shadow: 2px 2px 8px rgba(0,0,0,0.3);
     transition: background-color 0.3s ease;
 }
 
 .hotline-button:hover {
-    background-color: #b00000; /* Màu đỏ đậm hơn khi hover */
+    background-color: #cc0000; /* Màu đỏ đậm hơn khi hover */
 }
 
-.hotline-icon {
-    margin-right: 8px;
-    font-size: 1.2em; /* Kích thước biểu tượng điện thoại */
+.hotline-icon { /* Nếu bạn đã xóa thẻ span icon trong HTML, thì class này không còn tác dụng nhiều */
+    display: none; /* Ẩn hoàn toàn nếu không dùng icon */
 }
 
-/* Chat Bubbles Container (Bottom Right) */
-/* Nếu bạn muốn các nút chat nằm cùng 1 vị trí với .fixed-contact-buttons thì không cần thêm CSS cho nó */
-/* Thay vào đó, Zalo và Messenger sẽ là fixed */
+.hotline-text {
+    /* Không cần margin-left nếu không có icon */
+}
+
+
+/* Responsive Adjustments (giữ nguyên và kiểm tra lại các điểm đã sửa ở trên có ảnh hưởng không) */
+@media (max-width: 992px) {
+    /* ... các style cũ ... */
+    .sidebar {
+        flex: 0 0 220px; 
+    }
+     .main-homepage-content h2, /* Đảm bảo tiêu đề section căn trái trên tablet */
+    .main-product-listing h2 { 
+        text-align: left;
+    }
+}
+
+@media (max-width: 768px) {
+    /* ... các style cũ ... */
+    nav ul li { 
+         display: block; 
+         margin: 8px 0;
+    }
+    .page-layout-container {
+        flex-direction: column; 
+    }
+    .sidebar {
+        flex-basis: auto; 
+        width: 100%;
+        margin-bottom: 30px; 
+    }
+     .top-main-banner .container { /* Top banner trên mobile (nếu có) */
+        flex-direction: column; 
+        align-items: center;
+    }
+    .top-main-banner-image-container {
+        width: 100%;
+        margin-bottom: 10px;
+    }
+    .top-main-banner-hotline {
+        padding-left: 0;
+        text-align: center;
+    }
+    .main-homepage-content h2, /* Tiêu đề section trên mobile cũng căn trái */
+    .main-product-listing h2 {
+        text-align: left;
+        font-size: 1.6em; /* Giảm size chữ tiêu đề section một chút */
+    }
+    .hero-info-overlay h2 { font-size: 1.6em; } /* Giảm size chữ tiêu đề trên banner */
+    .hero-info-overlay p { font-size: 0.9em; }
+
+}
+
+@media (max-width: 480px) {
+    /* ... các style cũ ... */
+    .product-grid, .category-grid, .news-grid-home { 
+        grid-template-columns: 1fr; /* 1 cột cho tất cả lưới trên mobile nhỏ */
+    }
+     .main-homepage-content h2, /* Tiêu đề section trên mobile nhỏ */
+    .main-product-listing h2 {
+        font-size: 1.5em;
+    }
+}
+
+/* CSS cho các trang con (policy, giới thiệu, liên hệ, tin tức - giữ nguyên) */
+/* ... (toàn bộ CSS cho .page-header, .page-content, .policy-content, .news-list, .contact-container, .map-container, .sub-category-title đã có) ... */
+/* === Fixed Contact Buttons === */
+/* ... (CSS cho .fixed-contact-buttons và .hotline-button giữ nguyên như trước) ... */
 
 .zalo-chat-bubble,
 .messenger-chat-bubble {
-    position: fixed; /* Để các nút chat cố định riêng biệt */
+    position: fixed; 
     right: 20px;
-    width: 60px;  /* Kích thước bong bóng */
-    height: 60px; /* Kích thước bong bóng */
-    border-radius: 50%; /* Bo tròn thành hình tròn */
+    width: 60px;  /* QUAN TRỌNG: Kích thước bong bóng chiều rộng */
+    height: 60px; /* QUAN TRỌNG: Kích thước bong bóng chiều cao */
+    border-radius: 50%; 
     display: flex;
     justify-content: center;
     align-items: center;
@@ -1029,66 +905,237 @@ footer {
     transition: transform 0.3s ease;
 }
 
+/* ĐỊNH DẠNG CHO ẢNH ICON BÊN TRONG BONG BÓNG */
 .zalo-chat-bubble img,
 .messenger-chat-bubble img {
-    width: 32px; /* Kích thước icon bên trong bong bóng */
-    height: 32px;
+    width: 32px;  /* KÍCH THƯỚC MONG MUỐN CHO ICON */
+    height: 32px; /* KÍCH THƯỚC MONG MUỐN CHO ICON */
+    /* object-fit: contain; /* Đảm bảo icon không bị méo nếu ảnh gốc có tỷ lệ khác */
 }
 
 .zalo-chat-bubble:hover,
 .messenger-chat-bubble:hover {
-    transform: scale(1.1); /* Phóng to nhẹ khi hover */
+    transform: scale(1.1); 
 }
 
 /* Zalo Chat Bubble */
 .zalo-chat-bubble {
-    background-color: #0068ff; /* Màu xanh Zalo */
-    bottom: 90px; /* Vị trí của Zalo, nằm trên Messenger */
-    /* Nếu không có ảnh, bạn có thể bỏ img và dùng .chat-icon-text */
+    background-color: #0068ff; 
+    bottom: 90px; 
 }
 
 /* Messenger Chat Bubble */
 .messenger-chat-bubble {
-    background-color: #0084ff; /* Màu xanh Messenger */
-    bottom: 20px; /* Vị trí của Messenger */
-     /* Nếu không có ảnh, bạn có thể bỏ img và dùng .chat-icon-text */
+    background-color: #0084ff; 
+    bottom: 20px; 
 }
 
-.chat-icon-text { /* Dùng nếu bạn không có ảnh icon */
+/* ... (Phần @media cho mobile giữ nguyên như trước) ... */
+/* === Styles for Slider Controls === */
+#hero-main-banner-slider .slider-control {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(0, 0, 0, 0.3); /* Nền mờ cho nút */
     color: white;
-    font-weight: bold;
-    font-size: 0.9em;
+    border: none;
+    padding: 10px 15px; /* Kích thước nút */
+    font-size: 20px; /* Kích thước mũi tên */
+    cursor: pointer;
+    z-index: 20; /* Nằm trên slide */
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
 }
 
-/* Điều chỉnh cho màn hình nhỏ nếu các nút bị chồng chéo hoặc quá lớn */
-@media (max-width: 768px) {
-    .hotline-text {
-        display: none; /* Ẩn chữ số điện thoại, chỉ hiện icon trên mobile cho gọn */
-    }
-    .hotline-button {
-        padding: 10px; /* Điều chỉnh padding cho nút hotline tròn hơn */
-        width: 45px;
-        height: 45px;
-        justify-content: center;
-    }
-    .hotline-icon {
-        margin-right: 0;
-    }
+#hero-main-banner-slider .slider-control:hover {
+    background-color: rgba(0, 0, 0, 0.6); /* Đậm hơn khi hover */
+}
 
-    .zalo-chat-bubble,
-    .messenger-chat-bubble {
-        width: 50px;
-        height: 50px;
-    }
-    .zalo-chat-bubble img,
-    .messenger-chat-bubble img {
-        width: 28px;
-        height: 28px;
+#hero-main-banner-slider .prev {
+    left: 15px; /* Vị trí nút Previous */
+}
+
+#hero-main-banner-slider .next {
+    right: 15px; /* Vị trí nút Next */
+}
+/* === Fixed Contact Buttons & Back to Top - Updated === */
+
+/* Giữ nguyên CSS cho .fixed-contact-buttons, .hotline-button như trước */
+/* ... (CSS cho .fixed-contact-buttons và .hotline-button) ... */
+
+/* Nút "Chat với chúng tôi" */
+.chat-with-us-button {
+    position: fixed;
+    bottom: 20px; /* Cùng vị trí với Messenger */
+    right: 90px;  /* Đặt bên trái Messenger (Messenger 20px + width Messenger 60px + gap 10px) */
+    background-color: #4A5F8A; /* Màu xanh xám như ảnh mẫu */
+    color: white;
+    padding: 10px 18px;
+    border-radius: 20px; /* Bo tròn nhiều */
+    text-decoration: none;
+    font-size: 0.9em;
+    font-weight: bold;
+    box-shadow: 1px 1px 8px rgba(0,0,0,0.2);
+    z-index: 999; /* Thấp hơn bong bóng chat một chút nếu muốn bong bóng nổi hơn */
+    transition: background-color 0.3s ease;
+}
+.chat-with-us-button:hover {
+    background-color: #3a4a6d;
+}
+
+
+/* Zalo Chat Bubble (Điều chỉnh lại vị trí nếu cần) */
+.zalo-chat-bubble {
+    position: fixed; 
+    right: 20px;
+    bottom: 160px; /* Đẩy Zalo lên cao hơn để có không gian cho nút "Chat với chúng tôi" và Messenger */
+    width: 55px;  /* Có thể giảm nhẹ kích thước bong bóng */
+    height: 55px; 
+    border-radius: 50%; 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+    box-shadow: 2px 2px 10px rgba(0,0,0,0.2);
+    transition: transform 0.3s ease;
+    background-color: #0068ff; 
+    z-index: 1000;
+}
+
+/* Messenger Chat Bubble (Điều chỉnh lại vị trí nếu cần) */
+.messenger-chat-bubble {
+    position: fixed; 
+    right: 20px;
+    bottom: 90px; /* Đẩy Messenger lên trên nút Back to Top */
+    width: 55px;  
+    height: 55px; 
+    border-radius: 50%; 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+    box-shadow: 2px 2px 10px rgba(0,0,0,0.2);
+    transition: transform 0.3s ease;
+    background-color: #0084ff; 
+    z-index: 1000;
+}
+
+.zalo-chat-bubble img,
+.messenger-chat-bubble img {
+    width: 28px; 
+    height: 28px;
+}
+
+.zalo-chat-bubble:hover,
+.messenger-chat-bubble:hover {
+    transform: scale(1.1); 
+}
+
+
+/* Nút Lên Đầu Trang (Back to Top) */
+#back-to-top {
+    position: fixed;
+    bottom: 20px;
+    right: 20px; /* Sẽ nằm dưới nút Messenger */
+    background-color: rgba(0, 0, 0, 0.4); /* Màu nền mờ */
+    color: white;
+    width: 45px;  /* Kích thước nút */
+    height: 45px;
+    text-align: center;
+    line-height: 45px; /* Căn giữa icon mũi tên */
+    font-size: 20px;   /* Kích thước mũi tên */
+    border-radius: 4px; /* Hoặc 50% để làm tròn */
+    text-decoration: none;
+    z-index: 998; /* Nằm dưới các nút chat một chút */
+    opacity: 0; /* Mặc định ẩn */
+    visibility: hidden;
+    transition: opacity 0.3s ease, visibility 0.3s ease, background-color 0.3s ease;
+}
+
+#back-to-top:hover {
+    background-color: rgba(0, 0, 0, 0.7);
+}
+
+#back-to-top.show { /* Class để hiện nút khi cuộn trang */
+    opacity: 1;
+    visibility: visible;
+}
+
+
+/* Điều chỉnh cho màn hình nhỏ */
+@media (max-width: 768px) {
+    /* ... (CSS cho hotline, Zalo, Messenger trên mobile giữ nguyên hoặc điều chỉnh nếu cần) ... */
+    .chat-with-us-button {
+        /* Có thể bạn muốn ẩn nút này trên mobile nếu không gian chật chội, */
+        /* hoặc điều chỉnh kích thước/vị trí của nó */
+        padding: 8px 12px;
+        font-size: 0.8em;
+        right: 80px; /* Điều chỉnh lại vị trí nếu cần */
+        bottom: 15px;
     }
     .zalo-chat-bubble {
-        bottom: 80px; 
+        bottom: 130px; /* Điều chỉnh lại vị trí */
+        right: 15px;
+        width: 50px; height: 50px;
     }
     .messenger-chat-bubble {
-        bottom: 20px;
+        bottom: 70px; /* Điều chỉnh lại vị trí */
+        right: 15px;
+        width: 50px; height: 50px;
     }
+    #back-to-top {
+        width: 40px;
+        height: 40px;
+        line-height: 40px;
+        font-size: 18px;
+        right: 15px;
+        bottom: 15px;
+    }
+}
+/* === Related Products Section (Trang chi tiết sản phẩm) === */
+.related-products-section {
+    margin-top: 40px; /* Khoảng cách với phần mô tả sản phẩm ở trên */
+    padding-top: 30px;
+    border-top: 1px solid #e0e0e0; /* Đường kẻ phân cách */
+}
+
+.related-products-title {
+    font-size: 1.6em; /* Kích thước tiêu đề mục */
+    color: #8B4513; /* Màu nâu giống các tiêu đề section khác */
+    text-transform: uppercase;
+    margin-bottom: 25px;
+    text-align: left; /* Hoặc center nếu muốn */
+    /* border-bottom: 2px solid #eee; */ /* Có thể thêm đường kẻ dưới nếu muốn */
+    /* padding-bottom: 10px; */
+}
+
+/* Mục .product-grid và .product-item sẽ sử dụng lại style đã có, */
+/* nhưng bạn có thể muốn các item ở đây nhỏ hơn một chút */
+.related-products-section .product-grid {
+    /* Có thể giữ nguyên grid-template-columns từ .product-grid chung */
+    /* Hoặc nếu muốn chúng nhỏ hơn, ví dụ: */
+    /* grid-template-columns: repeat(auto-fit, minmax(180px, 1fr)); */
+    gap: 15px; /* Giảm khoảng cách một chút */
+}
+
+.related-products-section .product-item {
+    /* Style của .product-item chung sẽ được áp dụng */
+    /* Nếu muốn ảnh nhỏ hơn nữa cho mục này: */
+}
+.related-products-section .product-item img {
+     max-height: 160px; /* Điều chỉnh chiều cao ảnh sản phẩm liên quan */
+     /* object-fit: contain; giữ nguyên */
+}
+.related-products-section .product-item h3 {
+    font-size: 1em; /* Chữ tên sản phẩm liên quan nhỏ hơn */
+    margin-top: 8px;
+    margin-bottom: 8px;
+}
+.related-products-section .product-item .price {
+    font-size: 1em; /* Chữ giá nhỏ hơn */
+    margin-bottom: 8px;
+}
+.related-products-section .product-item .btn-detail {
+    padding: 6px 12px; /* Nút nhỏ hơn */
+    font-size: 0.85em;
 }

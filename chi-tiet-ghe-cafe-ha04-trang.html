@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ghế coffe HA04 - Màu Trắng - BÀN GHẾ NHỰA VŨ ANH</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        /* CSS cho trang chi tiết sản phẩm (giống hệt file chi-tiet-ghe-cafe-ha01-hong.html) */
+        .product-detail-container { display: flex; flex-wrap: wrap; gap: 25px; margin-bottom: 30px; }
+        .product-image-gallery { flex: 0 0 calc(40% - 12.5px); max-width: calc(40% - 12.5px); }
+        .product-image-gallery .main-image img { width: 100%; border: 1px solid #e0e0e0; border-radius: 5px; margin-bottom: 10px; max-height: 400px; object-fit: contain; }
+        .thumbnail-images { display: flex; gap: 8px; justify-content: flex-start; }
+        .thumbnail-images img { width: 70px; height: 70px; border: 1px solid #ccc; border-radius: 3px; cursor: pointer; object-fit: cover; }
+        .thumbnail-images img:hover, .thumbnail-images img.active-thumb { border-color: #5D4037; }
+        .product-info-details { flex: 0 0 calc(60% - 12.5px); max-width: calc(60% - 12.5px); }
+        .product-info-details .product-title-detail { font-size: 1.9em; color: #4E342E; margin-top: 0; margin-bottom: 10px; text-align: left; border-bottom: none; padding-bottom: 0; text-transform: uppercase; line-height: 1.3; }
+        .product-info-details .price-detail { font-size: 1.4em; color: #B71C1C; font-weight: bold; margin-bottom: 15px; }
+        .product-info-details .product-short-description { margin-bottom: 15px; line-height: 1.6; font-size: 0.95em; }
+        .product-info-details .product-short-description p strong { font-weight: 600; color: #333; }
+        .product-specifications h3, .product-full-description h3 { font-size: 1.2em; color: #8B4513; margin-top: 20px; margin-bottom: 10px; border-bottom: 1px solid #e0e0e0; padding-bottom: 8px; font-weight: 600; }
+        .product-specifications ul { list-style: none; padding-left: 0; }
+        .product-specifications ul li { margin-bottom: 7px; padding-left: 0; font-size: 0.9em; line-height: 1.5; }
+        .product-specifications ul li::before { content: none; }
+        .product-specifications ul li strong { color: #444; }
+        .contact-button-detail { display: inline-block; padding: 10px 20px; background-color: #007bff; color: white; text-decoration: none; border-radius: 5px; font-weight: bold; text-transform: uppercase; transition: background-color 0.3s; font-size: 0.95em; margin-top: 15px; }
+        .contact-button-detail:hover { background-color: #0056b3; }
+        .product-full-description { clear: both; padding-top: 15px; border-top: 1px solid #e9e9e9; margin-top: 20px; }
+        .product-full-description p { font-size: 0.95em; line-height: 1.7; margin-bottom: 1em; }
+        @media (max-width: 860px) { .product-image-gallery, .product-info-details { flex: 0 0 100%; max-width: 100%; } .product-image-gallery { margin-bottom: 20px; } }
+        .related-products-section { margin-top: 40px; padding-top: 30px; border-top: 1px solid #e0e0e0; clear: both; }
+        .related-products-title { font-size: 1.6em; color: #8B4513; text-transform: uppercase; margin-bottom: 25px; text-align: left; }
+        .related-products-section .product-grid { gap: 15px; }
+        .related-products-section .product-item img { max-height: 160px; }
+        .related-products-section .product-item h3 { font-size: 1em; margin-top: 8px; margin-bottom: 8px; }
+        .related-products-section .product-item .price { font-size: 1em; margin-bottom: 8px; }
+        .related-products-section .product-item .btn-detail { padding: 6px 12px; font-size: 0.85em; }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <div class="logo-container"><img src="images/logo ghế nhựa đúc anh vũ.png" alt="Logo Bàn ghế nhựa Vũ Anh" id="logo"><div class="brand-name"><h1>BÀN - GHẾ NHỰA VŨ ANH</h1><p class="tagline">SẢN XUẤT TRỰC TIẾP, KHÔNG QUA TRUNG GIAN</p></div></div>
+            <div class="header-contact"><p>Hotline & Zalo: <strong>0879243688</strong></p><div class="search-bar"><input type="text" placeholder="Tìm kiếm sản phẩm..."><button type="submit">Tìm</button></div></div>
+        </div>
+    </header>
+    <nav>
+        <div class="container">
+            <ul>
+                <li><a href="index.html">TRANG CHỦ</a></li><li><a href="gioi-thieu.html">GIỚI THIỆU</a></li><li class="dropdown-parent"><a href="javascript:void(0);">SẢN PHẨM <span class="arrow">&#9662;</span></a><ul class="dropdown-menu"><li><a href="ghe-ca-phe-nhua-duc-vuanh.html">GHẾ CÀ PHÊ (NHỰA ĐÚC)</a></li><li><a href="ghe-su-kien-nhua-duc-vuanh.html">GHẾ SỰ KIỆN (NHỰA ĐÚC)</a></li><li><a href="ban-su-kien-nhua-duc-vuanh.html">BÀN SỰ KIỆN (NHỰA ĐÚC)</a></li><li><a href="ghe-nhua-duc-khac-vuanh.html">GHẾ NHỰA ĐÚC KHÁC</a></li><li><a href="phu-kien-su-kien-vuanh.html">PHỤ KIỆN SỰ KIỆN</a></li></ul></li>
+                <li><a href="tin-tuc.html">TIN TỨC</a></li><li><a href="lien-he.html">LIÊN HỆ</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <div class="container page-content-container">
+        <div class="page-layout-container">     
+            <aside class="sidebar">
+                <h3>DANH MỤC SẢN PHẨM</h3>
+                <ul class="sidebar-nav">
+                    <li><a href="ghe-ca-phe-nhua-duc-vuanh.html" class="active">Ghế Cà Phê Nhựa Đúc</a></li>
+                    <li><a href="ghe-su-kien-nhua-duc-vuanh.html">Ghế Sự Kiện Nhựa Đúc</a></li>
+                    <li><a href="ban-su-kien-nhua-duc-vuanh.html">Bàn Sự Kiện Nhựa Đúc</a></li>
+                    <li><a href="phu-kien-su-kien-vuanh.html">Phụ Kiện Sự Kiện</a></li>
+                    <li><a href="ghe-nhua-duc-khac-vuanh.html">Ghế Nhựa Đúc Khác</a></li>
+                </ul>
+            </aside>
+
+            <main class="main-product-listing">
+                <div class="product-detail-container">
+                    <div class="product-image-gallery">
+                        <div class="main-image">
+                            <img src="images/ghe_cafe_ha04_trang.jpg" alt="Ghế nhựa coffe HA04 - Màu Trắng" id="mainProductImage">
+                        </div>
+                        <div class="thumbnail-images">
+                            <p style="font-size:0.9em; color:#777;">(Thêm ảnh nhỏ sản phẩm nếu có)</p>
+                        </div>
+                    </div>
+
+                    <div class="product-info-details">
+                        <h1 class="product-title-detail">Ghế nhựa coffe HA04 - Màu Trắng</h1>
+                        <p class="price-detail">Giá: Liên hệ</p>
+                        <div class="product-short-description">
+                            <p><strong>Mô tả ngắn:</strong></p>
+                            <p>Ghế nhựa đúc HA04 màu trắng, mang vẻ đẹp tinh khiết và hiện đại cho mọi không gian...</p>
+                            </div>
+                       <div class="product-specifications">
+                            <h3>Thông số kỹ thuật:</h3>
+                            <ul>
+                                <li><strong>Chất liệu:</strong> Nhựa PP đúc nguyên khối</li>
+                                <li><strong>Kích thước ghế (Cao x Rộng x Sâu):</strong> 80 x 46 cm </li>
+                                <li><strong>Chiều cao mặt ghế:</strong> 45cm </li>
+                                <li><strong>Kích thước mặt ghế:</strong> 42 x 43 cm </li>
+                                <li><strong>Màu sắc:</strong> Trắng</li>
+                                <li><strong>Các màu khác:</strong> Hồng, Ghi, Xanh, Đỏ, Vàng, Đen</li>
+                                <li><strong>Xuất xứ:</strong> Việt Nam - Bàn Ghế Nhựa Vũ Anh</li>
+                                <li><strong>Đặc điểm:</strong> Ghế làm từ nhựa nguyên sinh nhập khẩu 100% </li>
+                            </ul>
+                        </div>
+                        <a href="lien-he.html" class="contact-button-detail">Liên hệ đặt hàng</a>
+                    </div>
+                </div>
+
+                <div class="product-full-description">
+                    <h3>Mô tả chi tiết sản phẩm</h3>
+                    <p>Ghế nhựa coffe HA04 được làm từ 100% nhựa PP nguyên sinh cao cấp, đảm bảo độ bền vượt trội và an toàn cho người sử dụng. Sản phẩm được đúc nguyên khối, tạo nên sự chắc chắn và khả năng chịu lực tốt.</p>
+                    <p>Với thiết kế hiện đại và màu sắc đa dạng, ghế HA04 là lựa chọn lý tưởng cho các không gian quán cafe, trà sữa, phòng ăn gia đình, hoặc các khu vực chờ. Bề mặt ghế nhẵn bóng, dễ dàng vệ sinh lau chùi. Chân ghế được thiết kế vững chãi, chống trơn trượt hiệu quả.</p>
+                    <p>Sản phẩm được sản xuất trực tiếp tại xưởng của Bàn - Ghế Nhựa Vũ Anh, không qua trung gian, đảm bảo giá thành cạnh tranh nhất thị trường.</p>
+                    </div>
+                <section id="related-products" class="related-products-section">
+                    <h2 class="related-products-title">SẢN PHẨM CÙNG DANH MỤC</h2>
+                    <div class="product-grid"> 
+                        <div class="product-item"><a href="chi-tiet-ghe-cafe-ha04-den.html"><img src="images/ghe_cafe_ha04_den.jpg" alt="Ghế nhựa coffe HA04 - Màu Đen"></a><h3><a href="chi-tiet-ghe-cafe-ha04-den.html" style="color:inherit; text-decoration:none;">Ghế nhựa coffe HA04 - Đen</a></h3><p class="price">Giá: Liên hệ</p><a href="chi-tiet-ghe-cafe-ha04-den.html" class="btn-detail">Chi tiết</a></div>
+                        <div class="product-item"><a href="chi-tiet-ghe-cafe-ha02-ghi.html"><img src="images/ghe_cafe_ha02_ghi.jpg" alt="Ghế nhựa coffe HA02 - Màu Ghi"></a><h3><a href="chi-tiet-ghe-cafe-ha02-ghi.html" style="color:inherit; text-decoration:none;">Ghế nhựa coffe HA02 - Ghi</a></h3><p class="price">Giá: Liên hệ</p><a href="chi-tiet-ghe-cafe-ha02-ghi.html" class="btn-detail">Chi tiết</a></div>
+                        </div>
+                </section>
+            </main> 
+        </div> 
+        <a href="ghe-ca-phe-nhua-duc-vuanh.html" class="back-link-footer">Quay lại trang Ghế Cà Phê</a>
+    </div> 
+    <footer><div class="container"><div class="footer-content new-footer-layout"><div class="footer-col policy-links"><h4>CHÍNH SÁCH</h4><ul><li><a href="chinh-sach-bao-hanh.html">CHÍNH SÁCH BẢO HÀNH</a></li><li><a href="chinh-sach-bao-mat.html">CHÍNH SÁCH BẢO MẬT THÔNG TIN</a></li> <li><a href="quy-dinh-doi-tra.html">CHÍNH SÁCH ĐỔI - TRẢ HÀNG</a></li><li><a href="huong-dan-dat-hang.html">HƯỚNG DẪN ĐẶT HÀNG</a></li><li><a href="chinh-sach-van-chuyen.html">CHÍNH SÁCH VẬN CHUYỂN</a></li><li><a href="hinh-thuc-thanh-toan.html">HÌNH THỨC THANH TOÁN</a></li> </ul></div><div class="footer-col company-info"><h4>BÀN - GHẾ NHỰA VŨ ANH</h4><p><strong>Địa chỉ:</strong> Cụm CN Tân Hồng, Bình Giang, Hải Dương</p><p><strong>Điện thoại:</strong> 0879243688</p><p><strong>Email:</strong> vupham983@gmail.com</p><p><strong>Website:</strong> ghenhuavuanh.com</p></div><div class="footer-col connect-us"><h4>KẾT NỐI VỚI CHÚNG TÔI</h4><div class="social-icons"><a href="https://www.facebook.com/profile.php?id=61557499517913" target="_blank" class="social-icon fb" title="Facebook"><img src="images/facebook_icon.png" alt="Facebook"></a><a href="https://www.tiktok.com/@vu_plastic" target="_blank" class="social-icon tk" title="TikTok"><img src="images/tiktok_icon.png" alt="TikTok"></a><a href="LINK_YOUTUBE_CUA_BAN" target="_blank" class="social-icon yt" title="YouTube"><img src="images/youtube_icon.png" alt="YouTube"></a></div><form action="#" method="post" class="subscribe-form"><p style="margin-bottom: 5px;">Đăng ký nhận tin:</p><input type="email" name="email" placeholder="Email của bạn..." required><button type="submit">Đăng ký</button></form></div><div class="footer-col fanpage-embed"> <h4>FANPAGE FACEBOOK</h4><div class="fb-page-plugin-placeholder"><img src="images/facebook_fanpage_placeholder_vuanh.jpg" alt="Fanpage Bàn Ghế Nhựa Vũ Anh" style="max-width:100%; height:auto; border:1px solid #4F689C;"></div></div></div><div class="copyright"><p>&copy; 2025 BÀN - GHẾ NHỰA VŨ ANH. All rights reserved. Thiết kế bởi [Tên bạn hoặc công ty thiết kế nếu có]</p></div></div></footer>
+    <div class="fixed-contact-buttons"><a href="tel:0879243688" class="hotline-button"><span class="hotline-text">0879.243.688</span></a><a href="https://www.facebook.com/messages/t/282437361615364" target="_blank" rel="noopener noreferrer" class="chat-with-us-button">Chat với chúng tôi</a><a href="https://zalo.me/0879243688" class="zalo-chat-bubble" target="_blank" rel="noopener noreferrer" title="Chat qua Zalo"><img src="images/zalo_icon.png" alt="Zalo"> </a><a href="https://www.facebook.com/messages/t/282437361615364" class="messenger-chat-bubble" target="_blank" rel="noopener noreferrer" title="Chat qua Messenger"><img src="images/messenger_icon.png" alt="Messenger"></a></div>
+    <a href="#" id="back-to-top" title="Lên đầu trang">&#8679;</a> 
+    <script>
+        const backToTopButton = document.getElementById("back-to-top"); if (backToTopButton) { window.onscroll = function() { if (document.body.scrollTop > 100 || document.documentElement.scrollTop > 100) { backToTopButton.classList.add("show"); } else { backToTopButton.classList.remove("show"); } }; backToTopButton.addEventListener("click", function(e) { e.preventDefault(); window.scrollTo({ top: 0, behavior: 'smooth' }); }); }
+        function changeMainImage(newImageSrc) { const mainImg = document.getElementById('mainProductImage'); if(mainImg) mainImg.src = newImageSrc; const thumbnails = document.querySelectorAll('.thumbnail-images img'); thumbnails.forEach(thumb => { thumb.classList.remove('active-thumb'); if(thumb.src.endsWith(newImageSrc.substring(newImageSrc.lastIndexOf('/')+1))) { thumb.classList.add('active-thumb'); } }); }
+    </script>
+</body>
+</html>
