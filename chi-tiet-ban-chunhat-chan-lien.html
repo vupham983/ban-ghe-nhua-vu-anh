@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bàn Chữ Nhật Nhựa Đúc (Chân Liền) - BÀN GHẾ NHỰA VŨ ANH</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        /* CSS cho trang chi tiết sản phẩm */
+        .product-detail-container { display: flex; flex-wrap: wrap; gap: 25px; margin-bottom: 30px; }
+        .product-image-gallery { flex: 0 0 calc(40% - 12.5px); max-width: calc(40% - 12.5px); }
+        .product-image-gallery .main-image img { width: 100%; border: 1px solid #e0e0e0; border-radius: 5px; margin-bottom: 10px; max-height: 400px; object-fit: contain; }
+        .thumbnail-images { display: flex; gap: 8px; justify-content: flex-start; }
+        .thumbnail-images img { width: 70px; height: 70px; border: 1px solid #ccc; border-radius: 3px; cursor: pointer; object-fit: cover; }
+        .thumbnail-images img:hover, .thumbnail-images img.active-thumb { border-color: #5D4037; }
+        .product-info-details { flex: 0 0 calc(60% - 12.5px); max-width: calc(60% - 12.5px); }
+        .product-info-details .product-title-detail { font-size: 1.9em; color: #4E342E; margin-top: 0; margin-bottom: 10px; text-align: left; border-bottom: none; padding-bottom: 0; text-transform: uppercase; line-height: 1.3; }
+        .product-info-details .price-detail { font-size: 1.4em; color: #B71C1C; font-weight: bold; margin-bottom: 15px; }
+        .product-info-details .product-short-description { margin-bottom: 15px; line-height: 1.6; font-size: 0.95em; }
+        .product-info-details .product-short-description p strong { font-weight: 600; color: #333; }
+        .product-specifications h3, .product-full-description h3 { font-size: 1.2em; color: #8B4513; margin-top: 20px; margin-bottom: 10px; border-bottom: 1px solid #e0e0e0; padding-bottom: 8px; font-weight: 600; }
+        .product-specifications ul { list-style: none; padding-left: 0; }
+        .product-specifications ul li { margin-bottom: 7px; padding-left: 0; font-size: 0.9em; line-height: 1.5; }
+        .product-specifications ul li::before { content: none; }
+        .product-specifications ul li strong { color: #444; }
+        .contact-button-detail { display: inline-block; padding: 10px 20px; background-color: #007bff; color: white; text-decoration: none; border-radius: 5px; font-weight: bold; text-transform: uppercase; transition: background-color 0.3s; font-size: 0.95em; margin-top: 15px; }
+        .contact-button-detail:hover { background-color: #0056b3; }
+        .product-full-description { clear: both; padding-top: 15px; border-top: 1px solid #e9e9e9; margin-top: 20px; }
+        .product-full-description p { font-size: 0.95em; line-height: 1.7; margin-bottom: 1em; }
+        @media (max-width: 860px) { .product-image-gallery, .product-info-details { flex: 0 0 100%; max-width: 100%; } .product-image-gallery { margin-bottom: 20px; } }
+        .related-products-section { margin-top: 40px; padding-top: 30px; border-top: 1px solid #e0e0e0; clear: both; }
+        .related-products-title { font-size: 1.6em; color: #8B4513; text-transform: uppercase; margin-bottom: 25px; text-align: left; }
+        .related-products-section .product-grid { gap: 15px; }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <div class="logo-container"><img src="images/logo ghế nhựa đúc anh vũ.png" alt="Logo Bàn ghế nhựa Vũ Anh" id="logo"><div class="brand-name"><h1>BÀN - GHẾ NHỰA VŨ ANH</h1><p class="tagline">SẢN XUẤT TRỰC TIẾP, KHÔNG QUA TRUNG GIAN</p></div></div>
+            <div class="header-contact"><p>Hotline & Zalo: <strong>0879243688</strong></p><div class="search-bar"><input type="text" placeholder="Tìm kiếm sản phẩm..."><button type="submit">Tìm</button></div></div>
+        </div>
+    </header>
+    <nav>
+        <div class="container">
+            <ul>
+                <li><a href="index.html">TRANG CHỦ</a></li><li><a href="gioi-thieu.html">GIỚI THIỆU</a></li><li class="dropdown-parent"><a href="javascript:void(0);">SẢN PHẨM <span class="arrow">&#9662;</span></a><ul class="dropdown-menu"><li><a href="ghe-ca-phe-nhua-duc-vuanh.html">GHẾ CÀ PHÊ (NHỰA ĐÚC)</a></li><li><a href="ghe-su-kien-nhua-duc-vuanh.html">GHẾ SỰ KIỆN (NHỰA ĐÚC)</a></li><li><a href="ban-su-kien-nhua-duc-vuanh.html">BÀN SỰ KIỆN (NHỰA ĐÚC)</a></li><li><a href="ghe-nhua-duc-khac-vuanh.html">GHẾ NHỰA ĐÚC KHÁC</a></li><li><a href="phu-kien-su-kien-vuanh.html">PHỤ KIỆN SỰ KIỆN</a></li></ul></li>
+                <li><a href="tin-tuc.html">TIN TỨC</a></li><li><a href="lien-he.html">LIÊN HỆ</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <div class="container page-content-container">
+        <div class="page-layout-container">     
+            <aside class="sidebar">
+                <h3>DANH MỤC SẢN PHẨM</h3>
+                <ul class="sidebar-nav">
+                    <li><a href="ghe-ca-phe-nhua-duc-vuanh.html">Ghế Cà Phê Nhựa Đúc</a></li>
+                    <li><a href="ghe-su-kien-nhua-duc-vuanh.html">Ghế Sự Kiện Nhựa Đúc</a></li>
+                    <li><a href="ban-su-kien-nhua-duc-vuanh.html" class="active">Bàn Sự Kiện Nhựa Đúc</a></li>
+                    <li><a href="phu-kien-su-kien-vuanh.html">Phụ Kiện Sự Kiện</a></li>
+                    <li><a href="ghe-nhua-duc-khac-vuanh.html">Ghế Nhựa Đúc Khác</a></li>
+                </ul>
+            </aside>
+
+            <main class="main-product-listing">
+                <div class="product-detail-container">
+                    <div class="product-image-gallery">
+                        <div class="main-image">
+                            <img src="images/ban_chu_nhat_chan_lien_placeholder.jpg" alt="Bàn chữ nhật nhựa đúc chân liền" id="mainProductImage">
+                        </div>
+                        <div class="thumbnail-images">
+                            <p style="font-size:0.9em; color:#777;">(Khu vực ảnh nhỏ sản phẩm)</p>
+                        </div>
+                    </div>
+
+                    <div class="product-info-details">
+                        <h1 class="product-title-detail">Bàn chữ nhật nhựa đúc - Chân liền</h1>
+                        <p class="price-detail">Giá: Liên hệ</p>
+                        <div class="product-short-description">
+                            <p><strong>Mô tả ngắn:</strong> Bàn chữ nhật nhựa đúc nguyên khối với chân liền, mang lại độ bền và sự chắc chắn tối đa. Phù hợp làm bàn tiệc, bàn ăn, bàn làm việc đa năng.</p>
+                        </div>
+                        <div class="product-specifications">
+                            <h3>Thông số kỹ thuật:</h3>
+                            <ul>
+                                <li><strong>Chất liệu:</strong> Nhựa PP / HDPE đúc nguyên khối</li>
+                                <li><strong>Kiểu dáng:</strong> Bàn chữ nhật, chân liền gấp gọn, kèm sơn tĩnh điện</li>
+                                <li><strong>Kích thước (Dài x Rộng):</strong> Tùy chọn 80cm x 1m4</li>
+                                <li><strong>Chiều cao:</strong> ~75cm (tiêu chuẩn)</li>
+                                <li><strong>Màu sắc:</strong> Trắng (hoặc theo yêu cầu)</li>
+                                <li><strong>Xuất xứ:</strong> Sản xuất tại Việt Nam - Bàn Ghế Nhựa Vũ Anh</li>
+                                <li><strong>Đặc điểm:</strong> Siêu bền, chịu tải trọng lớn, kết cấu vững chắc.</li>
+                            </ul>
+                        </div>
+                        <a href="lien-he.html" class="contact-button-detail">Liên hệ đặt hàng</a>
+                    </div>
+                </div>
+
+                <div class="product-full-description">
+                    <h3>Mô tả chi tiết sản phẩm</h3>
+                    <p>Mẫu bàn chữ nhật nhựa đúc chân liền là sản phẩm được thiết kế để chịu được các điều kiện sử dụng khắc nghiệt nhất. Toàn bộ bàn được đúc nguyên khối từ nhựa cao cấp, tạo nên một kết cấu đồng nhất, siêu cứng và ổn định.</p>
+                    <p>Sản phẩm đặc biệt phù hợp cho các khu vực ăn tập thể, nhà hàng, quán ăn, hoặc các sự kiện ngoài trời yêu cầu sản phẩm có độ bền cao, không bị ảnh hưởng bởi thời tiết. Bề mặt bàn chống trầy xước và dễ dàng vệ sinh.</p>
+                </div>
+                
+                <section class="related-products-section">
+                    <h2 class="related-products-title">SẢN PHẨM TƯƠNG TỰ</h2>
+                    <div class="product-grid"> 
+                        <div class="product-item">
+                            <a href="chi-tiet-ban-chunhat-chan-roi.html"><img src="images/ban_chu_nhat_chan_roi_placeholder.jpg" alt="Bàn chữ nhật nhựa đúc chân rời"></a>
+                            <h3><a href="chi-tiet-ban-chunhat-chan-roi.html" style="color:inherit; text-decoration:none;">Bàn chữ nhật nhựa đúc - Chân rời</a></h3>
+                            <p class="price">Giá: Liên hệ</p>
+                            <a href="chi-tiet-ban-chunhat-chan-roi.html" class="btn-detail">Chi tiết</a>
+                        </div>
+                         <div class="product-item">
+                            <a href="chi-tiet-ban-tron-chan-lien.html"><img src="images/ban_tron_chan_lien_placeholder.jpg" alt="Bàn tròn nhựa đúc chân liền"></a>
+                            <h3><a href="chi-tiet-ban-tron-chan-lien.html" style="color:inherit; text-decoration:none;">Bàn tròn nhựa đúc - Chân liền</a></h3>
+                            <p class="price">Giá: Liên hệ</p>
+                            <a href="chi-tiet-ban-tron-chan-lien.html" class="btn-detail">Chi tiết</a>
+                        </div>
+                    </div>
+                </section>
+            </main> 
+        </div> 
+        <a href="ban-su-kien-nhua-duc-vuanh.html" class="back-link-footer">Quay lại trang Bàn Sự Kiện</a>
+    </div> 
+
+    <footer>
+        <div class="container">
+            <div class="footer-content new-footer-layout">
+                <div class="footer-col policy-links"><h4>CHÍNH SÁCH</h4><ul><li><a href="chinh-sach-bao-hanh.html">CHÍNH SÁCH BẢO HÀNH</a></li><li><a href="chinh-sach-bao-mat.html">CHÍNH SÁCH BẢO MẬT THÔNG TIN</a></li> <li><a href="quy-dinh-doi-tra.html">CHÍNH SÁCH ĐỔI - TRẢ HÀNG</a></li><li><a href="huong-dan-dat-hang.html">HƯỚNG DẪN ĐẶT HÀNG</a></li><li><a href="chinh-sach-van-chuyen.html">CHÍNH SÁCH VẬN CHUYỂN</a></li><li><a href="hinh-thuc-thanh-toan.html">HÌNH THỨC THANH TOÁN</a></li> </ul></div>
+                <div class="footer-col company-info"><h4>BÀN - GHẾ NHỰA VŨ ANH</h4><p><strong>Địa chỉ:</strong> Cụm CN Tân Hồng, Bình Giang, Hải Dương</p><p><strong>Điện thoại:</strong> 0879243688</p><p><strong>Email:</strong> vupham983@gmail.com</p><p><strong>Website:</strong> ghenhuavuanh.com</p></div>
+                <div class="footer-col connect-us"><h4>KẾT NỐI VỚI CHÚNG TÔI</h4><div class="social-icons"><a href="https://www.facebook.com/profile.php?id=61557499517913" target="_blank" class="social-icon fb" title="Facebook"><img src="images/facebook_icon.png" alt="Facebook"></a><a href="https://www.tiktok.com/@vu_plastic" target="_blank" class="social-icon tk" title="TikTok"><img src="images/tiktok_icon.png" alt="TikTok"></a><a href="LINK_YOUTUBE_CUA_BAN" target="_blank" class="social-icon yt" title="YouTube"><img src="images/youtube_icon.png" alt="YouTube"></a></div></div>
+                <div class="footer-col fanpage-embed"> <h4>FANPAGE FACEBOOK</h4><div class="fb-page-plugin-placeholder"><img src="images/facebook_fanpage_placeholder_vuanh.jpg" alt="Fanpage Bàn Ghế Nhựa Vũ Anh" style="max-width:100%; height:auto; border:1px solid #4F689C;"></div></div>
+            </div>
+            <div class="copyright"><p>&copy; 2025 BÀN - GHẾ NHỰA VŨ ANH. All rights reserved.</p></div>
+        </div>
+    </footer>
+    <script>
+        // Các script cần thiết có thể thêm vào đây
+    </script>
+</body>
+</html>
